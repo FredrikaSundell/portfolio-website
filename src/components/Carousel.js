@@ -20,7 +20,7 @@ class Carousel extends React.Component {
           subTitle: 'Notebook - a group project built for KYH Yrkeshögskola.',
           imgSrc: quire,
           link:
-            'https://github.com/Viktor-Hultman/quire_notebook_assignment_paperclip',
+            'https://viktor-hultman.github.io/quire_notebook_assignment_paperclip/',
           selected: false,
         },
         {
@@ -65,7 +65,7 @@ class Carousel extends React.Component {
       return (
         <Card
           item={item}
-          onClick={(e => this.handleCardClick(item.id, e))}
+          click={(e => this.handleCardClick(item.id, e))}
           key={item.id}
         />
       )
