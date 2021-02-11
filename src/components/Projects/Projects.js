@@ -1,15 +1,13 @@
 import React from 'react'
 
-import Card from '../components/Card'
+import Card from '../Card/Card'
+import './Projects.css'
 
-import quire from '../assets/images/quire.png'
-import todo from '../assets/images/todo.png'
-import portfolio from '../assets/images/portfolio.png'
+import quire from '../../assets/images/quire.png'
+import todo from '../../assets/images/todo.png'
+import portfolio from '../../assets/images/portfolio.png'
 
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-
-class Carousel extends React.Component {
+class Projects extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -60,27 +58,21 @@ class Carousel extends React.Component {
     })
   }
 
-  makeItems = (items) => {
-    return items.map(item => {
-      return (
-        <Card
-          item={item}
-          click={(e => this.handleCardClick(item.id, e))}
-          key={item.id}
-        />
-      )
-    })
-  }
-
   render() {
     return (
-      <Container fluid={true}>
-        <Row className="justify-content-around">
-          {this.makeItems(this.state.items)}
-        </Row>
-      </Container>
+      <div className="projects">
+        {this.state.items.map((item) => {
+          return (
+            <Card
+              item={item}
+              click={(e) => this.handleCardClick(item.id, e)}
+              key={item.id}
+            />
+          )
+        })}
+      </div>
     )
   }
 }
 
-export default Carousel
+export default Projects

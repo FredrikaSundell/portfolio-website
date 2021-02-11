@@ -1,0 +1,43 @@
+.main-header {
+    border-bottom: 1px solid #888;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.main-header .logo {
+    text-decoration: none;
+    color: #888;
+}
+
+.main-header .logo:hover {
+    color: black;
+}
+
+.main-header .logo {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 300;
+
+}
+
+.main-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-header ul li:not(:first-child) {
+    margin-left: 20px;
+}
+
+.main-header ul li a {
+    color: #888;
+    text-decoration: none;
+}
+
+.main-header ul li a:hover {
+    color: black;
+}

@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Hero from '../components/Hero'
-import Carousel from '../components/Carousel'
+import Projects from '../components/Projects/Projects'
+import Hero from '../components/Hero/Hero'
 
 function HomePage(props) {
   return (
     <div>
-      <Hero title={props.title} subTitle={props.subTitle} text={props.text} />
-      <Carousel />
+      <Hero title={props.title} subTitle={props.subTitle} />
+      <Projects />
     </div>
   )
 }
