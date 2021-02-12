@@ -4,63 +4,49 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ContactPage from './pages/ContactPage'
+import AboutPage from './pages/AboutPage/AboutPage'
+import ContactPage from './pages/ContactPage/ContactPage'
 
 const headerLinks = [
-  { title: 'Home', path: '/' },
-  { title: 'About', path: '/about' },
-  { title: 'Contact', path: '/contact' },
+  { title: 'Hem', path: '/' },
+  { title: 'Om mig', path: '/about' },
+  { title: 'Kontakt', path: '/contact' },
 ]
 
-class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      title: 'Fredrika Sundell',
-      home: {
-        title: 'Hej',
-        subTitle: 'Projects',
-      },
-      about: {
-        title: 'About me',
-      },
-      contact: {
-        title: 'Contact me',
-      },
-    }
-  }
+const home = {
+  title: 'Portfolio',
+  subTitle: 'Projekt skapade av mig',
+}
 
-  render() {
-    return (
-      <Router>
-        <Header title={this.state.title} headerLinks={headerLinks} />
+const about = {
+  title: 'Om mig',
+}
 
-        <Route
-          path="/"
-          exact
-          render={() => (
-            <HomePage
-              title={this.state.home.title}
-              subTitle={this.state.home.subTitle}
-            />
-          )}
-        />
+const contact = {
+  title: 'Kontakt',
+}
 
-        <Route
-          path="/about"
-          render={() => <AboutPage title={this.state.about.title} />}
-        />
+function App() {
+  return (
+    <Router>
+      <Header title="Fredrika Sundell" headerLinks={headerLinks} />
 
-        <Route
-          path="/contact"
-          render={() => <ContactPage title={this.state.contact.title} />}
-        />
+      <Route
+        path="/"
+        exact
+        render={() => <HomePage title={home.title} subTitle={home.subTitle} />}
+      />
 
-        <Footer />
-      </Router>
-    )
-  }
+      <Route path="/about" render={() => <AboutPage title={about.title} />} />
+
+      <Route
+        path="/contact"
+        render={() => <ContactPage title={contact.title} />}
+      />
+
+      <Footer />
+    </Router>
+  )
 }
 
 export default App

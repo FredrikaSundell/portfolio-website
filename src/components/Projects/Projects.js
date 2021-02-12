@@ -3,9 +3,9 @@ import React from 'react'
 import Card from '../Card/Card'
 import './Projects.css'
 
-import quire from '../../assets/images/quire.png'
-import todo from '../../assets/images/todo.png'
-import portfolio from '../../assets/images/portfolio.png'
+import Quire from '../../assets/images/Quire.png'
+import IP1 from '../../assets/images/IP1.png'
+import WIP from '../../assets/images/WIP.png'
 
 class Projects extends React.Component {
   constructor(props) {
@@ -15,34 +15,36 @@ class Projects extends React.Component {
         {
           id: 0,
           title: 'Quire',
-          subTitle: 'Notebook - a group project built for KYH Yrkeshögskola.',
-          imgSrc: quire,
+          subTitle:
+            'Anteckningsapp - ett grupparbete gjort under KYHs Front End utbildning.',
+          imgSrc: Quire,
           link:
             'https://viktor-hultman.github.io/quire_notebook_assignment_paperclip/',
           selected: false,
         },
         {
           id: 1,
-          title: 'Todo',
-          subTitle: 'An unstyled todo-app made with JavaScript.',
-          imgSrc: todo,
-          link: 'https://fredrikasundell.github.io/todo-app/',
+          title: 'Portfolio',
+          subTitle:
+            'Portfolio - mitt första egna projekt gjort under KYHs Front End utbildning med HTLM, CSS och JavaScript.',
+          imgSrc: IP1,
+          link: 'https://fredrikasundell.github.io/IP1/',
           selected: false,
         },
         {
           id: 2,
-          title: 'Portfolio',
-          subTitle:
-            'Portfolio - first project ever done (built for KYH Yrkeshögskola) with HTLM, CSS and JavaScript.',
-          imgSrc: portfolio,
-          link: 'https://fredrikasundell.github.io/IP1/',
+          title: 'Fler projekt pågång!',
+          subTitle: 'Sidan kommer uppdateras med fler roliga projekt.',
+          imgSrc: WIP,
+          link:
+            'https://viktor-hultman.github.io/quire_notebook_assignment_paperclip/',
           selected: false,
         },
       ],
     }
   }
 
-  handleCardClick = (id, card) => {
+  handleCardClick = (id) => {
     let items = [...this.state.items]
 
     items[id].selected = items[id].selected ? false : true

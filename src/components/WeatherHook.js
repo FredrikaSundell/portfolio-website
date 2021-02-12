@@ -7,7 +7,6 @@ function WeatherHook() {
   const [data, setData] = useState({ data: null })
 
   useEffect(() => {
-
     fetch(url)
       .then((response) => response.json())
       .then((json) => setData({ data: json }))
@@ -15,8 +14,8 @@ function WeatherHook() {
 
   return (
     <span>
-      Feels like {!data.data ? '?' : data.data.main.feels_like.toFixed(1)}°C in
-      Stockholm right now
+      Känns som {!data.data ? '?' : data.data.main.feels_like.toFixed(1)}°C i
+      Stockholm just nu.
     </span>
   )
 }

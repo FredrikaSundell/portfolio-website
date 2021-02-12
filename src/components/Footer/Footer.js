@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="main-footer">
       <WeatherHook />
-      Made by Fredrika Sundell.
+      Skapad av Fredrika Sundell.
     </footer>
   )
 }
