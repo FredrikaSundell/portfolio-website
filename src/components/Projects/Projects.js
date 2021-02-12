@@ -3,9 +3,9 @@ import React from 'react'
 import Card from '../Card/Card'
 import './Projects.css'
 
-import Quire from '../../assets/images/Quire.png'
-import IP1 from '../../assets/images/IP1.png'
-import WIP from '../../assets/images/WIP.png'
+import quire from '../../assets/images/quire.png'
+import ip1 from '../../assets/images/ip1.png'
+import wip from '../../assets/images/wip.png'
 
 class Projects extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Projects extends React.Component {
           title: 'Quire',
           subTitle:
             'Anteckningsapp - ett grupparbete gjort under KYHs Front End utbildning.',
-          imgSrc: Quire,
+          imgSrc: quire,
           link:
             'https://viktor-hultman.github.io/quire_notebook_assignment_paperclip/',
           selected: false,
@@ -27,7 +27,7 @@ class Projects extends React.Component {
           title: 'Portfolio',
           subTitle:
             'Portfolio - mitt första egna projekt gjort under KYHs Front End utbildning med HTLM, CSS och JavaScript.',
-          imgSrc: IP1,
+          imgSrc: ip1,
           link: 'https://fredrikasundell.github.io/IP1/',
           selected: false,
         },
@@ -35,7 +35,7 @@ class Projects extends React.Component {
           id: 2,
           title: 'Fler projekt pågång!',
           subTitle: 'Sidan kommer uppdateras med fler roliga projekt.',
-          imgSrc: WIP,
+          imgSrc: wip,
           link:
             'https://viktor-hultman.github.io/quire_notebook_assignment_paperclip/',
           selected: false,
