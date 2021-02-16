@@ -13,7 +13,7 @@ function ContactPage() {
         </li>
         <li>
           <a
-            href="https://www.Linkedin.com/"
+            href="https://www.linkedin.com/in/fredrika-sundell-9462b1a9"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -22,7 +22,7 @@ function ContactPage() {
         </li>
         <li>
           <a
-            href="https://www.Github.com/"
+            href="https://github.com/FredrikaSundell"
             target="_blank"
             rel="noopener noreferrer"
           >
